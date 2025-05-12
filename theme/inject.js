@@ -1,8 +1,15 @@
-// Load shared components into page
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    // Inject stylesheet with version
+    const head = document.querySelector("head");
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = `theme/style.css?v=${STYLE_VERSION}`;
+    head.appendChild(link);
+
+    // Load shared header
     includeHTML("header", "includes/header.html");
   });
-  
+
   function includeHTML(id, file) {
     fetch(file)
       .then(response => {
@@ -14,11 +21,3 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(err => console.error(err));
   }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const head = document.querySelector("head");
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = `theme/style.css?v=${STYLE_VERSION}`;
-  head.appendChild(link);
-});
