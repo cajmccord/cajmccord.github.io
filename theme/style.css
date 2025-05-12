@@ -10,6 +10,12 @@ body {
     background-color: #7500b5;
     color: white;
   }
+
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
   nav a {
     color: white;
