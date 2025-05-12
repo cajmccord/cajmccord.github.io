@@ -14,4 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(err => console.error(err));
   }
-  
+
+document.addEventListener("DOMContentLoaded", () => {
+  const head = document.querySelector("head");
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = `theme/style.css?v=${STYLE_VERSION}`;
+  head.appendChild(link);
+});
