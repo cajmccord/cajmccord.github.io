@@ -3,7 +3,7 @@
     const head = document.querySelector("head");
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = `theme/style.css?v=${STYLE_VERSION}`;
+    link.href = `theme/style.css?v=${Date.now()}`;
     head.appendChild(link);
 
     // Load shared header
