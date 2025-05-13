@@ -30,6 +30,10 @@ main {
 }
 
 /* ===== Logo & Branding ===== */
+.header-branding {
+  display: flex;
+  align-items: center;
+}
 .logo {
   width: auto;
   height: 75px;
