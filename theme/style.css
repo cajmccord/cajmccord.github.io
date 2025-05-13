@@ -1,6 +1,10 @@
+/* ===== Import Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+
 /* ===== Base Styles ===== */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Cormorant Garamond', sans-serif;
   background-color: #CFD4C5;
   color: #494949;
   margin: 0;
