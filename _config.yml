@@ -1,2 +1,5 @@
 title: C. McCord Online Portfolio
 baseurl: ""
+collections:
+  projects:
+    output: true
