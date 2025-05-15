@@ -4,8 +4,18 @@ title: Projects
 permalink: /projects/
 ---
 
-<h1>Object Oriented Programming Final Project</h1>
-<p>Click below to play the game directly in your browser.</p>
-<button onclick="cheerpjInit(); cheerpjRunMain('csse-220-final-project.jar');">
-  Run the Game
-</button>
+<section class="timeline">
+  <h2>Resume Timeline</h2>
+
+  {% for project in site.projects %}
+    {% assign side = forloop.index0 | modulo: 2 | plus: 0 %}
+    <div class="timeline-item {% if side == 0 %}left{% else %}right{% endif %}">
+      <div class="timeline-date">{{ project.season }}</div>
+      <div class="timeline-content">
+        <h3>{{ project.title }}</h3>
+        <h4>{{ project.course }}</h4>
+        <p>{{ project.description }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
